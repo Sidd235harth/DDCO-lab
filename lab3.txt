@@ -1,0 +1,24 @@
+//structure
+module cktand(output Y,input A,B); 
+and(Y, A, B);
+endmodule
+
+
+//data flow
+module andgate(output Y,input A,B); assign Y = A & B;
+endmodule
+
+
+//behavior
+module p3c(Y,A,B); 
+input A,B;
+output Y; 
+reg Y;
+always@(A or B)
+begin 
+if(A && B) 
+Y=1;
+else 
+Y=0;
+end
+endmodule
